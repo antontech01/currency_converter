@@ -51,7 +51,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
   // Fetches the latest exchange rates from the API.
   Future<void> convert() async {
     final response = await http.get(Uri.parse(
-        "https://openexchangerates.org/api/latest.json?app_id=ecbcd206a14f4445b8949706fd41115b"));
+        "https://openexchangerates.org/api/latest.json?app_id=Your-api-key"));
 
     if (response.statusCode == 200) {
       final exchangeRates = jsonDecode(response.body)["rates"];
